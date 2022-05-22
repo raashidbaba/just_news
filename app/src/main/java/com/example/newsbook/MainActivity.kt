@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
         val list = ArrayList<String>()
         for(i in 0..100){
             list.add("item $i")
+            print("hello my commit")
         }
         return list
     }
