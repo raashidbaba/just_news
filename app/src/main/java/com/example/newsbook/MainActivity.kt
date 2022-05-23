@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
         for(i in 0..100){
             list.add("item $i")
             print("hello my commit")
+            print("this is my commit")
         }
         return list
     }
