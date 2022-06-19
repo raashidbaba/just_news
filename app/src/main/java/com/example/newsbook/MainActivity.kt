@@ -1,9 +1,11 @@
 package com.example.newsbook
 
 
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.browser.customtabs.CustomTabsIntent
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.Response
@@ -57,6 +59,10 @@ val url = "https://saurav.tech/NewsAPI/top-headlines/category/health/in.json"
 
     override fun onItemClicked(item: News) {
       //   Toast.makeText(this,"clicked item $item",Toast.LENGTH_LONG).show()
+
+        val builder = CustomTabsIntent.Builder()
+        val customTabsIntent  = builder.build()
+        customTabsIntent.launchUrl(this, Uri.parse(item.url))
     }
 
 }
